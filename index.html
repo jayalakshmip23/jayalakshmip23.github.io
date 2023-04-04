@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/27d5cd3f15.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <div id="header">
+    <div class="container">
+        <nav>
+            <img src="img/logo.jpeg" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <!-- <li><a href="#">Services</a></li> -->
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>IT Student</p>
+            <h1>Hey, I'm <span>Jayalakshmi</span></h1>
+        </div>
+    </div>
+ </div>  
+ <!-- ----------------about------------ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="img/jay3.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>An energetic and passionate college student working towards B Tech in Information Science and Engineering at Don Bosco Institute of Technology. Also an Innovative Software Developer with a passion for creating reliable applications. Possesses excellent problem-solving skills, a dedication to quality, and a drive for continuous improvement.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>Designing Web Interfaces</li>
+                        <li><span>Data Structures</span><br>Writing clean codes</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>05/2022 - 10/2022</span><br>Software and Web Developer at Worktez.</li>
+                        <li><span>01/2022 - 03/2022</span><br>Content writer at MyDigital.io</li>
+                        <li><span>03/2021 - 06/2021</span><br>Head of Public Relations at Youth India Foundation.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>12/2020 - Present</span><br>Bachelor of Engineering at Don Bosco Institute of Technology, Bengaluru.</li>
+                        <li><span>06/2018 - 06/2020</span><br>Class 12 from M.E.S Kishora Kendra PU College, Bengaluru.</li>
+                        <li><span>06/2017 - 06/2018</span><br>Class 10 from The New Cambridge English School, Bengaluru.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--------------- socials --------------->
+<!-- <div id="socials">
+    <div class="container">
+        <h1 class="sub-title">My Socials</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="img/linkedin.png">
+            </div>
+            <div class="work">
+                <img src="img/resume.png">
+            </div>
+            <div class="work">
+                <img src="img/linkedin.png">
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+</div> -->
+
+<!-- ----contact----- -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>jayalakshmirao23@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>8431818790</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://www.instagram.com/jayalakshmi_rao23/"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/jayalakshmi-p-a4ba2b208/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="img/Jayalakshmi P Resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Made with <i class="fa-solid fa-heart"></i> by Jayalakshmi</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks =document.getElementsByClassName("tab-links");
+    var tabcontents =document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwALWCnv6OgAILFNKZt7ETDhvyJ6Nyr9E4vnyw5jSOKJQsoIZBEXGzaolvCUiuMfoF0dQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
