@@ -357,7 +357,15 @@ form .btn2c{
     margin-top: 10px;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 700px){
+    .container{
+        flex-direction: row;
+    }
+
+    .it , .details{
+        display: none;
+    }
+
     nav ul li{
         display: none;
     }
@@ -389,6 +397,7 @@ form .btn2c{
 
     #header{
         background-size: 300px 300px;
+        background-position: 50%;
     }
 
     .container-right p {
@@ -419,6 +428,7 @@ form .btn2c{
     .contact-left {
         flex-basis: 50%;
         margin-bottom: -25px;
+        margin-top: -20rem;
     }
 
     .form-control input, textarea {
