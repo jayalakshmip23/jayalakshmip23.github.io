@@ -371,11 +371,18 @@ form .btn2c{
     }
 
     .header-text h1{
-        font-size: 23px;
+        font-size: 22px;
         font-weight: bolder;
-        margin-top: 94px;
+        margin-top: 32px;
         /* margin-top: 9px; */
     }
+
+    .container{
+        display:flexbox;
+        flex-direction: column;
+        padding: 18px;
+    }
+    
 
     .phone {
         margin-left: 22rem;
@@ -383,6 +390,10 @@ form .btn2c{
         font-size: 14px;
         display: block;
         font-weight: bolder;
+    }
+
+    .phone{
+        display: none;
     }
 
     .btn{
@@ -398,11 +409,18 @@ form .btn2c{
     #header{
         background-size: 300px 300px;
         background-position: 50%;
+        background-position-y: calc(250px);
     }
 
     .container-right p {
         padding-top: 11rem;
         font-size: 18px;
+        padding-left: 0rem;
+        margin-top: 186px;
+    }
+
+    .btn2{
+        margin-left: 0px;
     }
 
     .sub-title {
@@ -428,7 +446,7 @@ form .btn2c{
     .contact-left {
         flex-basis: 50%;
         margin-bottom: -25px;
-        margin-top: -20rem;
+        margin-top: -10rem;
     }
 
     .form-control input, textarea {
@@ -454,18 +472,95 @@ form .btn2c{
     .fa-phone{
         display: none;
     }
+
+    .cback{
+        padding: 10px 5%;
+    }
 }
 
 /* <600px, 601px, 768px, 992px, 1200px */
 
-@media only screen and (min-width: 601px){
+/* @media only screen and (min-width: 601px){
+
+} */
+
+@media only screen and (min-width: 701px) and (max-width: 780px){
+    nav ul li{
+        display: none;
+    }
+
+    .container{
+        display:flexbox;
+        flex-direction: column;
+        padding: 18px;
+    }
+
+    #header{
+        background-size: 300px 300px;
+        background-position: 100%;
+        /* background-position-y: calc(250px); */
+    }
+
+    .container-right p {
+        padding-top: 5rem;
+        padding-left: 1rem;
+    }
+
+    .btn2{
+        margin-left: 10px;
+    }
+
+    .cback {
+        padding: 10px 2%;
+        margin-top: -113px;
+    }
 
 }
 
-@media only screen and (min-width: 768px){
+/* @media only screen and (min-width: 781px){
+    nav ul li{
+        display: none;
+    }
+
+    .container{
+        display:flexbox;
+        flex-direction: column;
+        padding: 18px;
+    }
+
+    #header{
+        background-size: 350px 350px;
+        background-position: 100%;
+    }
+
+    .cback {
+        padding: 80px 2%;
+        margin-top: -113px;
+    }
+} */
+
+@media only screen and (max-width: 380px){
+    .contact-left{
+        margin-top: -3rem;
+    }
+
+    .cback{
+        padding: 10px 5%;
+    }
 
 }
 
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 400px) and (max-width: 450px){
+    .contact-left{
+        margin-top: -15rem;
+    }
+
+    .btn2{
+        margin-top: -12px;
+    }
 
 }
+
+/* @media only screen and (min-width: 992px){
+
+} */
