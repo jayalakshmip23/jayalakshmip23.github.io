@@ -114,6 +114,10 @@ nav ul li a:hover::after{
     font-weight: 900;
 }
 
+.fa-paper-plane.fa-email, .email{
+    display: none;
+}
+
 .details{
     font-size: 18px;
     font-weight: bolder;
@@ -351,4 +355,107 @@ form .btn2c{
     font-size: 60px;
     color: #0d2f3f;
     margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px){
+    nav ul li{
+        display: none;
+    }
+
+    .header-text h1{
+        font-size: 23px;
+        font-weight: bolder;
+        margin-top: 94px;
+        /* margin-top: 9px; */
+    }
+
+    .phone {
+        margin-left: 22rem;
+        margin-top: -40px;
+        font-size: 14px;
+        display: block;
+        font-weight: bolder;
+    }
+
+    .btn{
+        margin-top: 13px;
+        font-size: small;
+        padding: 14px;
+    }
+
+    .header-text p {
+        font-size: 23px;
+    }
+
+    #header{
+        background-size: 300px 300px;
+    }
+
+    .container-right p {
+        padding-top: 11rem;
+        font-size: 18px;
+    }
+
+    .sub-title {
+        font-size: 35px;
+    }
+
+    .contact-left p {
+        margin-top: 30px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .contact-left p i {
+        margin-right: 6px;
+        font-size: 22px;
+    }
+
+    .btnc.btn2c {
+        margin-top: 29px;
+        padding: 10px;
+    }
+
+    .contact-left {
+        flex-basis: 50%;
+        margin-bottom: -25px;
+    }
+
+    .form-control input, textarea {
+        margin-bottom: -10px;
+    }
+
+    .fa-3x {
+        font-size: 2em;
+    }
+
+    .counter-container {
+        margin: 1px 21px;
+    }
+    
+    .counter {
+        font-size: 40px;
+    }
+
+    .fa-paper-plane.fa-email, .email{
+        display:contents;
+    }
+
+    .fa-phone{
+        display: none;
+    }
+}
+
+/* <600px, 601px, 768px, 992px, 1200px */
+
+@media only screen and (min-width: 601px){
+
+}
+
+@media only screen and (min-width: 768px){
+
+}
+
+@media only screen and (min-width: 992px){
+
 }
